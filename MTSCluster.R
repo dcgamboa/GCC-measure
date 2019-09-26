@@ -7,7 +7,7 @@
 
 # description
 # In this program a clustering of time series is made by using the procedure 
-# in Alonso and Peña (2019). first the matrix of Generalized Cross correlation (GCC) is built by 
+# in Alonso and PeÃ±a (2019). first the matrix of Generalized Cross correlation (GCC) is built by 
 # using the subrutine GCCmatrix, then a hierarchical grouping is constructed and the number of 
 #  clusters is selected by a modified silhouette statistics, as follows:
 # (1) series that join the groups at a distance larger than a given threshold of the 
@@ -46,7 +46,7 @@
 #  
 
 # 
-# written by Andrés Alonso, Carolina Gamboa and Daniel Peña. 
+# written by AndrÃ©s Alonso, Carolina Gamboa and Daniel PeÃ±a. 
 #----------------------------------------------------------------------------------
 
 
@@ -293,8 +293,8 @@ library('tseries')
 
 # this fuctions are used in the program. 
 # the description of each function can be found in the header of the program. 
-source("kOptim.R") 
-source("GCC_sim.R")
+#source("kOptim.R") 
+#source("GCC_sim.R")
 
 
 #............................................................................
@@ -553,7 +553,7 @@ kOptim <- function(xData, yData, kMax, kinf){
 # Description:   Within dispersion measures. Expression (2) at Tibshirani et al (2001).
 # 
 # Input :                    DistanceMatrix : square matrix of GCC distances
-#                            Clusters : Matriz de asignación de grupos 
+#                            Clusters : Matriz de asignaciÃ³n de grupos 
 #                            nClus: number of groups 
 # 
 # Output:                   Within dispersion measure 
@@ -589,7 +589,7 @@ WithinDispersion = function(DistanceMatrix, Clusters, nClus){
 # Description:  this function computes the gap and the number of groups using the gap statistics
 # 
 # Input :                    DistanceMatrix : square matrix of GCC distances
-#                            Clusters : Matriz de asignación de grupos 
+#                            Clusters : Matriz de asignaciÃ³n de grupos 
 #                            B: number of iterations for the bootstrap  
 # 
 # Output:                   nClus number of groups 
@@ -666,7 +666,7 @@ GAPdistance <- function(DistanceMatrix, Clusters, B){
 #               for each couple of groups
 # 
 # Input :                    DistanceMatrix : square matrix of GCC distances
-#                            Clusters : Matriz de asignación de grupos 
+#                            Clusters : Matriz de asignaciÃ³n de grupos 
 # 
 # Output:                   graph square
 # 
